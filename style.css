@@ -22,6 +22,17 @@ a {
     color: inherit;
 }
 
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+}
+
 
 /* KEYFRAMES */
 
@@ -143,6 +154,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    letter-spacing: 3px;
 }
 
 .emoji {
@@ -169,4 +181,66 @@ body {
 
 .key-text {
     text-decoration: underline solid #EDB96F;
+}
+
+
+/* WORK STYLES */
+
+.work {
+    margin-top: 60px;
+    height: 1000px;
+}
+
+
+/* TOP */
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.second-heading {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+
+/* FILTERS */
+
+.filters {
+    display: flex;
+    column-gap: 40px;
+}
+
+/* .filter-item {
+
+} */
+
+.filter-button {
+ opacity: 0.6;
+ font-size: 13px;
+ text-transform: uppercase;
+ letter-spacing: 2.5px;
+ cursor: pointer;
+ transition: all .4s;
+}
+
+.filter-button:hover {
+    opacity: 1;
+}
+
+.filter-button--active {
+    opacity: 1;
+}
+
+
+/* GRID */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 333px 119px 325px;
+    gap: 25px;
 }
