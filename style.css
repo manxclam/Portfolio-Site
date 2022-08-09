@@ -1,5 +1,5 @@
 
-/* USER VARIABLES */
+/* USER COLOR VARIABLES */
 
 :root {
     --background-color: #080D10;
@@ -37,6 +37,18 @@ a {
     }
 }
 
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1.0);
+    }
+}
+
 
 /* BASE STYLES */
 
@@ -45,7 +57,7 @@ body {
     width: 100%;
     background-color: var(--background-color);
     font-family: 'Oswald', sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     color: var(--font-color);
     position: relative;
     overflow-x: hidden;
@@ -103,4 +115,58 @@ body {
 
 .btn-contact {
     animation: fade-down 0.5s 0.4s backwards;
+}
+
+
+/* MAIN STYLES */
+
+.main {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 90px;
+    padding: 0 25px;
+}
+
+
+/* INTRO STYLES */
+
+.intro {
+    padding-top: 150px;
+    animation: fade-up .6s;
+}
+
+.first-heading {
+    font-weight: 700;
+    font-size: 48px;
+    opacity: .9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emoji {
+    font-size: 32px;
+    margin-top: -7px;
+    margin-left: 10px;
+}
+
+.first-text {
+    font-size: 40px;
+    opacity: .85;
+    font-weight: 300;
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+.first-text-bold {
+    font-weight: 600;
+}
+
+.name-text {
+    color: #EDB96F;
+}
+
+.key-text {
+    text-decoration: underline solid #EDB96F;
 }
