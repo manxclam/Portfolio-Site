@@ -1,0 +1,106 @@
+
+/* USER VARIABLES */
+
+:root {
+    --background-color: #080D10;
+    --background-highlight: #302617;
+    --font-color: #DDE4EA;
+    --contrast-color: #6FBDED;
+}
+
+
+/* RESET */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* KEYFRAMES */
+
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1.0);
+    }
+}
+
+
+/* BASE STYLES */
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--background-color);
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    color: var(--font-color);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.highlight-color {
+    height: 1000px;
+    width: 1000px;
+    background-image: radial-gradient(closest-side, var(--background-highlight), var(--background-color));
+    position: absolute;
+    top: -570px;
+    left: 15%;
+    z-index: -1;
+}
+
+
+/* HEADER STYLES */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 42px 62px;
+    /* need width 100% with fixed positioning */
+    position: fixed;
+    width: 100%;
+}
+
+.logo {
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* first: name; second: timing; third: delay; */
+    animation: fade-down 0.5s 0.4s backwards;
+}
+
+
+/* BUTTON STYLES */
+
+.btn {
+    background-color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--background-color);
+    padding: 10px 20px;
+    border-radius: 5000px;
+    /* allows for timing of all transitions */
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.15);
+}
+
+.btn-contact {
+    animation: fade-down 0.5s 0.4s backwards;
+}
