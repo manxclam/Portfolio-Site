@@ -6,6 +6,8 @@
     --background-highlight: #302617;
     --font-color: #DDE4EA;
     --contrast-color: #6FBDED;
+    --default-opacity: 0.2;
+    --hover-opacity: 0.1;
 }
 
 
@@ -74,7 +76,7 @@ body {
     scrollbar-width: none;
 }
 
-body::-webkit-scrollbar {
+ body::-webkit-scrollbar {          /* for chrome and safari */
     display: none;
 }
 
@@ -316,13 +318,37 @@ body::-webkit-scrollbar {
 /* PROJECT INFO STYLES */
 
 .project-info {
-    /* opacity: 0; */
+    opacity: 0;
     position: absolute;         /* to take it out of flow (let others ignore its space) */
     bottom: 0px;
     z-index: 100;
     text-align: left;
     padding: 20px;
     transform: translateY(10px);
+    transition: all .4s;
+}
+
+.project:hover .project-info {
+    opacity: 1;
+    transform: translate(0);
+}
+
+.third-heading {
+    font-size: 16px;
+}
+
+.description {
+    font-size: 14px;
+    margin: 3px 0 12px;
+    opacity: .8;
+}
+
+.technologies {
+    font-size: 10px;
+    text-transform: uppercase;
+    display: flex;
+    column-gap: 14px;
+    opacity: .8;
 }
 
 
