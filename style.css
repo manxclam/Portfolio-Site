@@ -191,6 +191,7 @@ body {
 
 .work {
     margin-top: 120px;
+    animation: fade-up 0.6s 0.2s backwards;
 }
 
 
@@ -300,13 +301,13 @@ body {
     width: 100%;
     background-color: black;
     position: absolute;
-    opacity: 0.2;
+    opacity: var(--default-opacity);
     transition: all 0.4s;
     z-index: 10;
 }
 
 .project:hover::before {
-    opacity: 0.05;
+    opacity: var(--hover-opacity);
 }
 
 .project:hover .grid-image {
