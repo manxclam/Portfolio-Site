@@ -76,7 +76,7 @@ body {
     scrollbar-width: none;
 }
 
- body::-webkit-scrollbar {          /* for chrome and safari */
+body::-webkit-scrollbar {          /* for chrome and safari */
     display: none;
 }
 
@@ -335,6 +335,7 @@ body {
 
 .third-heading {
     font-size: 16px;
+    letter-spacing: 3px;
 }
 
 .description {
@@ -346,6 +347,7 @@ body {
 .technologies {
     font-size: 10px;
     text-transform: uppercase;
+    letter-spacing: 2px;
     display: flex;
     column-gap: 14px;
     opacity: .8;
