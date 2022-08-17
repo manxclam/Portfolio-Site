@@ -255,6 +255,7 @@ body::-webkit-scrollbar {          /* for chrome and safari */
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    transition: all 0.4s;
 }
 
 .project:nth-child(1) {
